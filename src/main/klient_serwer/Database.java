@@ -30,9 +30,7 @@ public class Database {
 				String p_surname = strtk.nextToken();
 				int p_age = Integer.parseInt(strtk.nextToken());
 				
-				database.add(new Person(p_pesel, p_name, p_surname, p_age));
-                               
-				//record = bi.readLine();
+				database.add(new Person(p_pesel, p_name, p_surname, p_age));                               
 			}
 			bi.close();
 		} catch (Exception e){

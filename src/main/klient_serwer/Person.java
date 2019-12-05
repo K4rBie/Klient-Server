@@ -8,7 +8,7 @@ import java.util.*;
 import java.io.*;
 /**
  *
- * @author Piotr
+ * @author Karol
  */
 public class Person implements Comparable, Serializable{
 	String name;
