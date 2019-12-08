@@ -1,7 +1,9 @@
-/**
- *
- * @author Karol
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
  */
+
 package src.main.klient_serwer;
 import java.util.*;
 import java.io.*;
@@ -67,7 +69,7 @@ class Server_Action implements ActionListener {
         String input_line = null, output_line = null;
         
         try {
-            server = new ServerSocket(5567);
+            server = new ServerSocket(5568);
             database = new Database("main.db");
             System.out.println("baza załadowana");
             client = server.accept();
