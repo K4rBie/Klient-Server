@@ -1,9 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package src.main.klient_serwer;
 import java.util.*;
 import java.io.*;
@@ -13,10 +7,15 @@ import java.awt.*;
 import java.awt.event.*;
 
 /**
- *
+ * Główna klasa programu Server.
  * @author karol
  */
 public class Server {
+
+    /**
+    * Tworzy interfejs graficzny i czeka na akcję.
+    * @author karol
+    */
     public static void main(String[] args) throws Exception {
         
         JFrame.setDefaultLookAndFeelDecorated(false);
@@ -38,7 +37,10 @@ public class Server {
 }
 
 
-
+/**
+* Po wykonaniu uruchamia się serwer.
+* @author karol
+*/
 
 class Server_Action implements ActionListener {
     JButton b;
@@ -50,6 +52,10 @@ class Server_Action implements ActionListener {
         this.l = l;
     }
 
+    /**
+    * Zajmuje się interfejsem graficznym przy uruchamianiu serwera.
+    * @author karol
+    */
     public void actionPerformed (ActionEvent event) {
         //b.setText("Zatrzymaj Serwer");
         //b.removeActionListener(this);
@@ -59,6 +65,10 @@ class Server_Action implements ActionListener {
         
     }
     
+  /**
+    * Właściwe uruchomienie serwera. Po uruchomieniu czeka na decyzję klienta o rozłączeniu.
+    * @author karol
+    */
     public void spinServer() {
     
         ServerSocket server = null;

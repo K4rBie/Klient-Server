@@ -1,18 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-/**
- *
- * @author Piotr
- */
 package src.main.klient_serwer;
 import java.util.*;
 import java.io.*;
 /**
- *
+ * Klasa reprezentująca jeden rekord w bazie danych.
  * @author Karol
  */
 public class Person implements Comparable, Serializable{
@@ -28,6 +18,10 @@ public class Person implements Comparable, Serializable{
 		this.age = age;
 	}
 	
+	/**
+    * Implementacja potrzebna dla Comparable
+    * @author Karol
+    */
         @Override
 	public int compareTo (Object tv) {
 		int a;
@@ -35,10 +29,14 @@ public class Person implements Comparable, Serializable{
 		return (this.age-a);
 	}
 	
-	public long get_pesel(){
-		return this.pesel;
-	}
+// 	public long get_pesel(){
+// 		return this.pesel;
+// 	}
 	
+    /**
+    * Zwraca zawartość rekordu w postaci Stringa.
+    * @author Karol
+    */
 	public String get_record(){
 		String record = "" + this.pesel + " " + this.name + " " + this.surname  + " " + this.age;
 		return record;

@@ -1,9 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 /**
  *
  * @author Karol
@@ -12,6 +6,11 @@ package src.main.klient_serwer;
 import java.util.*;
 import java.io.*;
 import java.net.*;
+
+/**
+ * Klasa bazy danych. Zapisuje poszczególne rekordy w drzewie binarnym i pozwala na ich odczytanie po podaniu peselu.
+ * @author Karol
+ */
 public class Database {
 	TreeSet<Person> database = new TreeSet<Person>();
 	
@@ -38,6 +37,10 @@ public class Database {
 		}
 	}
 	
+	/**
+    * Zwraca rekord po podaniu peselu. Jeśli rekord o podanym peselu nie istnieje, zwraca null.
+    * @author Karol
+    */
 	public Person get_record(long pesel_key) {
 		Iterator<Person> iterator = database.iterator();
         while(iterator.hasNext()) {
