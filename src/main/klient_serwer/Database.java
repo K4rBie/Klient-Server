@@ -14,6 +14,11 @@ import java.net.*;
 public class Database {
 	TreeSet<Person> database = new TreeSet<Person>();
 	
+	/**
+    * Standardowy konstruktor.
+    * @author Karol
+    * @param db_name ścieżka razem z nazwą bazy danych w postaci pliku tekstowego.
+    */
 	Database (String db_name){
 		try {
 			// czytaj bazę danych z pliku
@@ -38,8 +43,10 @@ public class Database {
 	}
 	
 	/**
-    * Zwraca rekord po podaniu peselu. Jeśli rekord o podanym peselu nie istnieje, zwraca null.
+    * Zwraca rekord po podaniu peselu.
     * @author Karol
+    * @param pesel_key numer PESEL wybranego wpisu
+    * @return Zwraca osobę o podanym PESELu. Jeśli rekord nie istnieje, zwraca null.
     */
 	public Person get_record(long pesel_key) {
 		Iterator<Person> iterator = database.iterator();

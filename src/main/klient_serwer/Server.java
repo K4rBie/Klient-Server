@@ -15,6 +15,7 @@ public class Server {
     /**
     * Tworzy interfejs graficzny i czeka na akcję.
     * @author karol
+    * @param args argumenty dla maina. Nieprzydatne.
     */
     public static void main(String[] args) throws Exception {
         
@@ -47,6 +48,12 @@ class Server_Action implements ActionListener {
     JLabel l;
     //Server server;
     
+    /**
+    * Konstruktor.
+    * @author karol
+    * @param b przycisk, którego akcja jest wykonywana.
+    * @param l pole tekstowe, które będzie aktualizowane.
+    */
     Server_Action(JButton b, JLabel l) {
         this.b = b;
         this.l = l;
@@ -55,6 +62,7 @@ class Server_Action implements ActionListener {
     /**
     * Zajmuje się interfejsem graficznym przy uruchamianiu serwera.
     * @author karol
+    * @param event wykonywane zdarzenie.
     */
     public void actionPerformed (ActionEvent event) {
         //b.setText("Zatrzymaj Serwer");

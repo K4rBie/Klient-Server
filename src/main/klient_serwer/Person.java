@@ -2,7 +2,7 @@ package src.main.klient_serwer;
 import java.util.*;
 import java.io.*;
 /**
- * Klasa reprezentująca jeden rekord w bazie danych.
+ * Reprezentuje jeden rekord w bazie danych – osobę.
  * @author Karol
  */
 public class Person implements Comparable, Serializable{
@@ -11,6 +11,14 @@ public class Person implements Comparable, Serializable{
 	long pesel;
 	int age;
 	
+    /**
+    * Konstruktor pobiera dane i tworzy z nich instancję klasy Person.
+    * @author karol
+    * @param pesel numer PESEL osoby.
+    * @param name imię osoby.
+    * @param surname nazwisko osoby.
+    * @param age wiek osoby.
+    */
 	Person (long pesel, String name, String surname, int age){
 		this.name = name;
 		this.surname = surname;
@@ -21,6 +29,8 @@ public class Person implements Comparable, Serializable{
 	/**
     * Implementacja potrzebna dla Comparable
     * @author Karol
+    * @param tv obiekt castowany do instancji klasy Person.
+    * @return różnicę wieku.
     */
         @Override
 	public int compareTo (Object tv) {
@@ -29,13 +39,19 @@ public class Person implements Comparable, Serializable{
 		return (this.age-a);
 	}
 	
-// 	public long get_pesel(){
-// 		return this.pesel;
-// 	}
+    /**
+    * Zwraca numer PESEL osoby.
+    * @author Karol
+    * @return Zwraca numer PESEL osoby.
+    */
+	public long get_pesel(){
+		return this.pesel;
+	}
 	
     /**
     * Zwraca zawartość rekordu w postaci Stringa.
     * @author Karol
+    * @return Zwraca zawartość rekordu w postaci Stringa.
     */
 	public String get_record(){
 		String record = "" + this.pesel + " " + this.name + " " + this.surname  + " " + this.age;
